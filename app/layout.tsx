@@ -15,7 +15,6 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'Portfólio | Desenvolvedor Full Stack',
   description: 'Desenvolvedor Full Stack especialista em React, Node.js e PostgreSQL. 16 anos de experiência em gestão transformados em soluções tecnológicas.',
-  generator: 'v0.app',
   icons: {
     icon: [
       {
