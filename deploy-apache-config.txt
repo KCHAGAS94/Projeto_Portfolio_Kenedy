@@ -1,0 +1,37 @@
+# CONFIGURAÇÃO APACHE (caso seu servidor use Apache ao invés de Nginx)
+# Execute apenas se descobrir que está usando Apache
+
+# ==== CONFIGURAÇÃO PARA APACHE ====
+# Criar arquivo de configuração do site
+sudo nano /etc/apache2/sites-available/kenedychagasdev.kend.shop.conf
+
+# Conteúdo para o arquivo Apache (copie e cole no nano):
+<VirtualHost *:80>
+    ServerName kenedychagasdev.kend.shop
+    
+    ProxyRequests Off
+    ProxyPreserveHost On
+    
+    ProxyPass / http://localhost:3001/
+    ProxyPassReverse / http://localhost:3001/
+    
+    ProxyPass /socket.io/ http://localhost:3001/socket.io/
+    ProxyPassReverse /socket.io/ http://localhost:3001/socket.io/
+    
+    ErrorLog ${APACHE_LOG_DIR}/kenedychagasdev_error.log
+    CustomLog ${APACHE_LOG_DIR}/kenedychagasdev_access.log combined
+</VirtualHost>
+
+# Ativar módulos necessários
+sudo a2enmod proxy
+sudo a2enmod proxy_http
+sudo a2enmod proxy_wstunnel
+
+# Ativar o site
+sudo a2ensite kenedychagasdev.kend.shop.conf
+sudo apache2ctl configtest
+sudo systemctl reload apache2
+
+# SSL para Apache (opcional mas recomendado)
+sudo apt install certbot python3-certbot-apache -y
+sudo certbot --apache -d kenedychagasdev.kend.shop

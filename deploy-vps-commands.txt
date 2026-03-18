@@ -1,0 +1,124 @@
+# COMANDOS PARA DEPLOY NO VPS - kenedychagasdev.kend.shop
+# Execute estes comandos via PuTTY no servidor 161.97.73.207
+
+# ==== PASSO 1: VERIFICAR CONFIGURAÇÃO DO SERVIDOR ====
+# Verificar qual servidor web está rodando
+sudo systemctl status nginx
+sudo systemctl status apache2
+
+# Verificar versão do Node.js
+node --version
+npm --version
+
+# Verificar estrutura de diretórios web
+ls -la /var/www/
+ls -la /etc/nginx/sites-available/ 2>/dev/null || echo "Nginx não encontrado"
+ls -la /etc/apache2/sites-available/ 2>/dev/null || echo "Apache não encontrado"
+
+# ==== PASSO 2: CRIAR DIRETÓRIO PARA O PROJETO ====
+# Navegar para diretório web e criar pasta do projeto
+cd /var/www/
+sudo mkdir -p kenedychagasdev
+sudo chown -R $USER:$USER kenedychagasdev
+cd kenedychagasdev
+
+# ==== PASSO 3: CLONAR O PROJETO DO GITHUB ====
+# Clonar o repositório
+git clone https://github.com/KCHAGAS94/Projeto_Portfolio_Kenedy.git .
+
+# Verificar se os arquivos foram clonados
+ls -la
+
+# ==== PASSO 4: INSTALAR DEPENDÊNCIAS ====
+# Instalar dependências do projeto
+npm install
+
+# ==== PASSO 5: BUILD DO PROJETO NEXT.JS ====
+# Fazer o build de produção
+npm run build
+
+# Testar se o build foi criado
+ls -la .next/
+
+# ==== PASSO 6: INSTALAR PM2 (PROCESS MANAGER) ====
+# Instalar PM2 globalmente (se não estiver instalado)
+sudo npm install -g pm2
+
+# Verificar se PM2 está instalado
+pm2 --version
+
+# ==== PASSO 7: CONFIGURAR APLICAÇÃO COM PM2 ====
+# Criar arquivo de configuração do PM2
+cat > ecosystem.config.js << 'EOF'
+module.exports = {
+  apps: [{
+    name: 'kenedychagasdev',
+    script: 'npm',
+    args: 'start',
+    cwd: '/var/www/kenedychagasdev',
+    instances: 1,
+    autorestart: true,
+    watch: false,
+    max_memory_restart: '1G',
+    env: {
+      NODE_ENV: 'production',
+      PORT: 3001
+    }
+  }]
+};
+EOF
+
+# Iniciar aplicação com PM2
+pm2 start ecosystem.config.js
+pm2 save
+pm2 startup
+
+# Verificar status da aplicação
+pm2 status
+pm2 logs kenedychagasdev
+
+# ==== PASSO 8: CONFIGURAR SERVIDOR WEB (NGINX) ====
+# Se for NGINX, criar configuração do site
+sudo nano /etc/nginx/sites-available/kenedychagasdev.kend.shop
+
+# Conteúdo para o arquivo nginx (copie e cole no nano):
+server {
+    listen 80;
+    listen [::]:80;
+    server_name kenedychagasdev.kend.shop;
+
+    location / {
+        proxy_pass http://localhost:3001;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+
+# Ativar o site
+sudo ln -s /etc/nginx/sites-available/kenedychagasdev.kend.shop /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo systemctl reload nginx
+
+# ==== PASSO 9: CONFIGURAR SSL COM CERTBOT (OPCIONAL MAS RECOMENDADO) ====
+# Instalar Certbot se não estiver instalado
+sudo apt update
+sudo apt install certbot python3-certbot-nginx -y
+
+# Obter certificado SSL
+sudo certbot --nginx -d kenedychagasdev.kend.shop
+
+# ==== PASSO 10: VERIFICAR SE TUDO ESTÁ FUNCIONANDO ====
+# Verificar status dos serviços
+sudo systemctl status nginx
+pm2 status
+curl -I http://kenedychagasdev.kend.shop
+
+# Verificar logs se houver problemas
+pm2 logs kenedychagasdev
+sudo tail -f /var/log/nginx/error.log

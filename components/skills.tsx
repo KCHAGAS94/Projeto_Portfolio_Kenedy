@@ -2,7 +2,7 @@
 
 const skills = {
   linguagens: ["JavaScript", "TypeScript", "HTML5", "CSS3"],
-  frameworks: ["React", "Next.js", "Tailwind CSS"],
+  frameworks: ["React", "Tailwind CSS"],
   bancosDados: ["PostgreSQL", "SQL"],
   ferramentas: ["Git", "GitHub", "VPS + PuTTY", "VS Code"],
   competencias: ["UI e UX", "Desenvolvimento Web", "Business Intelligence", "Sistemas ERP"],

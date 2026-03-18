@@ -1,0 +1,83 @@
+# COMANDOS ÚTEIS PARA MANUTENÇÃO E TROUBLESHOOTING
+
+# ==== COMANDOS PM2 ÚTEIS ====
+# Ver status de todas as aplicações
+pm2 status
+
+# Ver logs em tempo real
+pm2 logs kenedychagasdev
+
+# Reiniciar aplicação
+pm2 restart kenedychagasdev
+
+# Parar aplicação
+pm2 stop kenedychagasdev
+
+# Remover aplicação do PM2
+pm2 delete kenedychagasdev
+
+# Listar todas as aplicações
+pm2 list
+
+# ==== COMANDOS DE ATUALIZAÇÃO DO PROJETO ====
+# Para atualizar o código quando houver mudanças no GitHub:
+cd /var/www/kenedychagasdev
+git pull origin main
+npm install  # somente se houver mudanças no package.json
+npm run build
+pm2 restart kenedychagasdev
+
+# ==== VERIFICAR LOGS DE ERRO ====
+# Logs do Nginx
+sudo tail -f /var/log/nginx/error.log
+sudo tail -f /var/log/nginx/access.log
+
+# Logs do Apache (se aplicável)
+sudo tail -f /var/log/apache2/error.log
+sudo tail -f /var/log/apache2/access.log
+
+# Logs da aplicação
+pm2 logs kenedychagasdev
+
+# ==== VERIFICAR PORTAS EM USO ====
+# Ver quais portas estão sendo usadas
+sudo netstat -tulnp | grep :80
+sudo netstat -tulnp | grep :3001
+sudo lsof -i :3001
+
+# ==== COMANDOS DE DIAGNÓSTICO ====
+# Testar se o site responde
+curl -I http://kenedychagasdev.kend.shop
+curl -I https://kenedychagasdev.kend.shop
+
+# Testar aplicação diretamente na porta 3001
+curl http://localhost:3001
+
+# Verificar processo do Node.js
+ps aux | grep node
+
+# ==== PROBLEMAS COMUNS E SOLUÇÕES ====
+
+# PROBLEMA: Porta 3001 já em uso
+# SOLUÇÃO: Alterar porta no ecosystem.config.js ou parar processo conflitante
+sudo lsof -ti:3001 | xargs sudo kill -9
+
+# PROBLEMA: Permissões negadas
+# SOLUÇÃO: Ajustar permissões
+sudo chown -R $USER:$USER /var/www/kenedychagasdev
+sudo chmod -R 755 /var/www/kenedychagasdev
+
+# PROBLEMA: Módulo não encontrado após npm install
+# SOLUÇÃO: Limpar cache e reinstalar
+rm -rf node_modules package-lock.json
+npm install
+
+# PROBLEMA: Build falha
+# SOLUÇÃO: Verificar logs e dependências
+npm run build --verbose
+
+# PROBLEMA: Nginx não consegue conectar com a aplicação
+# SOLUÇÃO: Verificar se a aplicação está rodando e na porta correta
+pm2 status
+sudo nginx -t
+sudo systemctl status nginx

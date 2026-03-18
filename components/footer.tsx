@@ -36,7 +36,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-border">
           <p className="text-sm text-muted-foreground text-center">
-            Desenvolvido com Next.js e Tailwind CSS
+            Desenvolvido com React e Tailwind CSS
           </p>
           <p className="text-sm text-muted-foreground text-center">
             Todos os direitos reservados © {new Date().getFullYear()} Kenedy Chagas
