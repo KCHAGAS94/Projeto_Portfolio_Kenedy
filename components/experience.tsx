@@ -28,7 +28,7 @@ const experiences = [
   {
     company: "Infinity do Brasil",
     position: "Líder de Almoxarifado / Analista de Planejamento",
-    period: "Julho 2023 – Maio 2025",
+    period: "Novembro 2021 – Maio 2025",
     achievements: [
       {
         title: "Integridade de Dados",
