@@ -32,6 +32,17 @@ export function ProjectsSection() {
                 {project.description}
               </p>
 
+              {project.liveUrl ? (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-flex text-sm font-semibold text-primary transition-opacity hover:opacity-80"
+                >
+                  Clique aqui para ver o site em produção
+                </a>
+              ) : null}
+
               <div className="mt-8 space-y-6">
                 <VideoFrame src={project.videoSrc} label={`Adicione o vídeo de ${project.title}`} />
                 <ImageCarousel images={project.images} title={project.title} />

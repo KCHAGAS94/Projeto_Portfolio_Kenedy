@@ -2,6 +2,7 @@ export type Project = {
   title: string
   technologies: string[]
   description: string
+  liveUrl?: string
   // Coloque aqui o caminho do vídeo (ex: "/videos/projeto-1.mp4") ou deixe vazio para mostrar o placeholder
   videoSrc?: string
   // Coloque aqui os caminhos das imagens do projeto (ex: "/projetos/projeto-1-1.png")
@@ -17,12 +18,28 @@ export type Experience = {
 
 export const projects: Project[] = [
   {
-    title: 'Projeto 1',
-    technologies: ['React', 'Next.js', 'TypeScript', 'PostgreSQL'],
+    title: 'Site: Aniversário de 15 anos',
+    technologies: ['React', 'Next.js', 'TypeScript', 'PostgreSQL', 'API PAGAMENTOS', 'Tailwind CSS', 'Git', 'GitHub', 'VPS', 'PuTTY', 'UI e UX'],
     description:
-      'Descrição breve do projeto. Substitua por um resumo do que ele faz, o problema que resolve e seu papel no desenvolvimento.',
+      'Desenvolvi uma plataforma web para convite de festa de 15 anos, com foco em experiência visual, confirmação de presença e gestão do evento. O projeto foi construído com Next.js, React e Tailwind CSS, incluindo RSVP com persistência em PostgreSQL e integração com Mercado Pago para pagamentos via PIX e cartão, além de páginas administrativas para acompanhamento de confirmados e status de pagamentos.',
+    liveUrl: 'https://15anosvitoriaemanuelly.kchagas.com.br',
     videoSrc: '',
-    images: [],
+    images: [
+      '/projects/site-niver-15-anos/capa.png',
+      '/projects/site-niver-15-anos/sobre.png',
+      '/projects/site-niver-15-anos/momentos.png',
+      '/projects/site-niver-15-anos/lista-presente-1.png',
+      '/projects/site-niver-15-anos/lista-presente-2.png',
+      '/projects/site-niver-15-anos/lista-presente-3.png',
+      '/projects/site-niver-15-anos/lista-presente-4.png',
+      '/projects/site-niver-15-anos/checkout-1-pix.png',
+      '/projects/site-niver-15-anos/checkout-2-pix.png',
+      '/projects/site-niver-15-anos/checkout-1-credito.png',
+      '/projects/site-niver-15-anos/site-confirmacao.png',
+      '/projects/site-niver-15-anos/site-confirmados.png',
+      '/projects/site-niver-15-anos/relatorio-pagamentos.png',
+      
+    ],
   },
   {
     title: 'Projeto 2',
