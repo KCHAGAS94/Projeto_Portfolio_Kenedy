@@ -23,7 +23,7 @@ export const projects: Project[] = [
     description:
       'Desenvolvi uma plataforma web para convite de festa de 15 anos, com foco em experiência visual, confirmação de presença e gestão do evento. O projeto foi construído com Next.js, React e Tailwind CSS, incluindo RSVP com persistência em PostgreSQL e integração com Mercado Pago para pagamentos via PIX e cartão, além de páginas administrativas para acompanhamento de confirmados e status de pagamentos.',
     liveUrl: 'https://15anosvitoriaemanuelly.kchagas.com.br',
-    videoSrc: '',
+    videoSrc: '/projects/site-niver-15-anos/gravaçao-site-15-anos/gravacao-final.mp4',
     images: [
       '/projects/site-niver-15-anos/capa.png',
       '/projects/site-niver-15-anos/sobre.png',
