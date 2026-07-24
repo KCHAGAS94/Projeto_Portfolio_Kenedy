@@ -3,6 +3,7 @@ export type Project = {
   technologies: string[]
   description: string
   liveUrl?: string
+  githubUrl?: string
   // Coloque aqui o caminho do vídeo (ex: "/videos/projeto-1.mp4") ou deixe vazio para mostrar o placeholder
   videoSrc?: string
   // Coloque aqui os caminhos das imagens do projeto (ex: "/projetos/projeto-1-1.png")
@@ -54,6 +55,15 @@ export const projects: Project[] = [
     technologies: ['JavaScript', 'Next.js', 'PostgreSQL', 'Git'],
     description:
       'Descrição breve do projeto. Substitua por um resumo do que ele faz, o problema que resolve e seu papel no desenvolvimento.',
+    githubUrl: 'https://github.com/seu-usuario/seu-repositorio',
+
+  },
+  {
+    title: 'Projeto 3',
+    technologies: ['JavaScript', 'Next.js', 'PostgreSQL', 'Git'],
+    description:
+      'Descrição breve do projeto. Substitua por um resumo do que ele faz, o problema que resolve e seu papel no desenvolvimento.',
+    githubUrl: 'https://github.com/seu-usuario/seu-repositorio',
   },
 ]
 

@@ -32,16 +32,29 @@ export function ProjectsSection() {
                 {project.description}
               </p>
 
-              {project.liveUrl ? (
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-4 inline-flex text-sm font-semibold text-primary transition-opacity hover:opacity-80"
-                >
-                  Clique aqui para ver o site em produção
-                </a>
-              ) : null}
+              <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+                {project.liveUrl ? (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex text-sm font-semibold text-primary transition-opacity hover:opacity-80"
+                  >
+                    Clique aqui para ver o site em produção
+                  </a>
+                ) : null}
+
+                {project.githubUrl ? (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex text-sm font-semibold text-primary transition-opacity hover:opacity-80"
+                  >
+                    Clique aqui para ver no GitHub
+                  </a>
+                ) : null}
+              </div>
 
               {project.videoSrc || (project.images && project.images.length > 0) ? (
                 <div className="mt-8 space-y-6">
