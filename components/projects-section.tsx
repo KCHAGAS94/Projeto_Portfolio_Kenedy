@@ -43,10 +43,16 @@ export function ProjectsSection() {
                 </a>
               ) : null}
 
-              <div className="mt-8 space-y-6">
-                <VideoFrame src={project.videoSrc} label={`Adicione o vídeo de ${project.title}`} />
-                <ImageCarousel images={project.images} title={project.title} />
-              </div>
+              {project.videoSrc || (project.images && project.images.length > 0) ? (
+                <div className="mt-8 space-y-6">
+                  {project.videoSrc ? (
+                    <VideoFrame src={project.videoSrc} label={`Adicione o vídeo de ${project.title}`} />
+                  ) : null}
+                  {project.images && project.images.length > 0 ? (
+                    <ImageCarousel images={project.images} title={project.title} />
+                  ) : null}
+                </div>
+              ) : null}
             </article>
           ))}
         </div>
