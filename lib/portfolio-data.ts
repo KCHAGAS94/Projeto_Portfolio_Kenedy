@@ -132,6 +132,12 @@ export const moreProjects: MoreProject[] = [
       'Dashboard para acompanhamento de partidas e oportunidades de apostas de valor (value bets) no Brasileirão Série A. Monorepo com backend em Express servindo uma API de partidas e frontend em Vite, React e Tailwind CSS.',
     githubUrl: 'https://github.com/KCHAGAS94/ValueBetTracker',
   },
+  {
+    title: 'PNK Automação',
+    description:
+      'Site institucional para empresa de automação e soluções elétricas, apresentando a marca e os serviços oferecidos. Desenvolvido com Next.js e TypeScript.',
+    githubUrl: 'https://github.com/KCHAGAS94/pnkautomacao',
+  },
 ]
 
 export const experiences: Experience[] = [
