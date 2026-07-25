@@ -40,15 +40,27 @@ export function MoreProjectsSection() {
                     <p className="mt-4 flex-1 text-pretty leading-relaxed text-muted-foreground">
                       {project.description}
                     </p>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-opacity hover:opacity-80"
-                    >
-                      <ExternalLink className="size-4" />
-                      Ver no GitHub
-                    </a>
+                    <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+                      {project.liveUrl ? (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-opacity hover:opacity-80"
+                        >
+                          <ExternalLink className="size-4" />
+                          Ver em produção
+                        </a>
+                      ) : null}
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-opacity hover:opacity-80"
+                      >
+                        Ver no GitHub
+                      </a>
+                    </div>
                   </article>
                 </div>
               ))}

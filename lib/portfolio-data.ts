@@ -14,6 +14,7 @@ export type MoreProject = {
   title: string
   description: string
   githubUrl: string
+  liveUrl?: string
 }
 
 export type Experience = {
@@ -57,12 +58,21 @@ export const moreProjects: MoreProject[] = [
     description:
       'Aplicação web para controle financeiro pessoal, com cadastro de transações e limites de gastos. Desenvolvida com Next.js, TypeScript e Tailwind CSS, utilizando Prisma e PostgreSQL para persistência dos dados e autenticação via JWT.',
     githubUrl: 'https://github.com/KCHAGAS94/gestaocontas3',
+    liveUrl: 'https://gestaocontas.vercel.app/public',
   },
   {
     title: 'Consultoria Kenedy Chagas',
     description:
       'Site institucional para proposta profissional de consultoria voltada à melhoria de processos no chão de fábrica, almoxarifado, produção, compras e planejamento. Desenvolvido com Next.js, TypeScript, Tailwind CSS e componentes Radix UI.',
     githubUrl: 'https://github.com/KCHAGAS94/mentoria-gestao',
+    liveUrl: 'https://kchagasconsultoria.vercel.app/',
+  },
+  {
+    title: 'Cálculo de Hora Extra',
+    description:
+      'Ferramenta web que calcula, de forma simples e rápida, o valor das horas extras trabalhadas. O usuário informa o mês, o salário, as horas trabalhadas e as horas extras (50%, 70% e 100%), e o site retorna o valor devido, incluindo o adicional de Descanso Semanal Remunerado (DSR).',
+    githubUrl: 'https://github.com/KCHAGAS94/over_time',
+    liveUrl: 'https://calculohoraextra.netlify.app/',
   },
 ]
 
