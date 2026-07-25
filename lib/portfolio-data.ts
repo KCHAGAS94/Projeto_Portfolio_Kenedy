@@ -126,6 +126,12 @@ export const moreProjects: MoreProject[] = [
       'Protótipo de sistema para gestão de projetos com quadro kanban, cadastro de usuários, cards e atividades. Estrutura profissional em React, Vite e TypeScript no frontend, com json-server simulando a API no backend.',
     githubUrl: 'https://github.com/KCHAGAS94/sistema-criar-prototipo',
   },
+  {
+    title: 'ValueBet Tracker',
+    description:
+      'Dashboard para acompanhamento de partidas e oportunidades de apostas de valor (value bets) no Brasileirão Série A. Monorepo com backend em Express servindo uma API de partidas e frontend em Vite, React e Tailwind CSS.',
+    githubUrl: 'https://github.com/KCHAGAS94/ValueBetTracker',
+  },
 ]
 
 export const experiences: Experience[] = [
