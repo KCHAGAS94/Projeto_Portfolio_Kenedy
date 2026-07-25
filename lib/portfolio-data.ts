@@ -58,6 +58,12 @@ export const moreProjects: MoreProject[] = [
       'Aplicação web para controle financeiro pessoal, com cadastro de transações e limites de gastos. Desenvolvida com Next.js, TypeScript e Tailwind CSS, utilizando Prisma e PostgreSQL para persistência dos dados e autenticação via JWT.',
     githubUrl: 'https://github.com/KCHAGAS94/gestaocontas3',
   },
+  {
+    title: 'Consultoria Kenedy Chagas',
+    description:
+      'Site institucional para proposta profissional de consultoria voltada à melhoria de processos no chão de fábrica, almoxarifado, produção, compras e planejamento. Desenvolvido com Next.js, TypeScript, Tailwind CSS e componentes Radix UI.',
+    githubUrl: 'https://github.com/KCHAGAS94/mentoria-gestao',
+  },
 ]
 
 export const experiences: Experience[] = [
