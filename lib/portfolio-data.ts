@@ -102,6 +102,12 @@ export const moreProjects: MoreProject[] = [
     githubUrl: 'https://github.com/KCHAGAS94/lista-compras',
     liveUrl: 'https://listacomprar.netlify.app/',
   },
+  {
+    title: 'Controle de Compras',
+    description:
+      'Sistema para controle pessoal de compras e gastos, com cadastro de compras e geração de relatórios. Utiliza Firebase para autenticação e persistência dos dados.',
+    githubUrl: 'https://github.com/KCHAGAS94/controle-finaceiro',
+  },
 ]
 
 export const experiences: Experience[] = [
