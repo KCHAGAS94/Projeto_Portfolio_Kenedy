@@ -138,6 +138,12 @@ export const moreProjects: MoreProject[] = [
       'Site institucional para empresa de automação e soluções elétricas, apresentando a marca e os serviços oferecidos. Desenvolvido com Next.js e TypeScript.',
     githubUrl: 'https://github.com/KCHAGAS94/pnkautomacao',
   },
+  {
+    title: 'Gestão de Tarefas Diárias',
+    description:
+      'Aplicação web para organização de tarefas do dia a dia, com tela de login e página para acompanhamento das tarefas cadastradas pelo usuário.',
+    githubUrl: 'https://github.com/KCHAGAS94/Gestao_tarefas_diaria',
+  },
 ]
 
 export const experiences: Experience[] = [
