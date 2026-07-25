@@ -2,11 +2,32 @@
 
 import { useCallback, useEffect, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
-import { ChevronLeft, ChevronRight, ImageIcon } from 'lucide-react'
+import { ChevronLeft, ChevronRight, ImageIcon, X } from 'lucide-react'
 
 export function ImageCarousel({ images, title }: { images: string[]; title: string }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' })
   const [selected, setSelected] = useState(0)
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
+
+  const lightboxPrev = useCallback(
+    () => setLightboxIndex((i) => (i === null ? i : (i - 1 + images.length) % images.length)),
+    [images.length],
+  )
+  const lightboxNext = useCallback(
+    () => setLightboxIndex((i) => (i === null ? i : (i + 1) % images.length)),
+    [images.length],
+  )
+
+  useEffect(() => {
+    if (lightboxIndex === null) return
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setLightboxIndex(null)
+      if (e.key === 'ArrowLeft') lightboxPrev()
+      if (e.key === 'ArrowRight') lightboxNext()
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [lightboxIndex, lightboxPrev, lightboxNext])
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi])
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi])
@@ -41,7 +62,8 @@ export function ImageCarousel({ images, title }: { images: string[]; title: stri
               <img
                 src={src || '/placeholder.svg'}
                 alt={`${title} — imagem ${i + 1}`}
-                className="aspect-video w-full object-cover"
+                className="aspect-video w-full cursor-zoom-in object-cover"
+                onClick={() => setLightboxIndex(i)}
               />
             </div>
           ))}
@@ -82,6 +104,56 @@ export function ImageCarousel({ images, title }: { images: string[]; title: stri
           </div>
         </>
       )}
+
+      {lightboxIndex !== null ? (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          onClick={() => setLightboxIndex(null)}
+        >
+          <button
+            type="button"
+            onClick={() => setLightboxIndex(null)}
+            aria-label="Fechar imagem"
+            className="absolute right-4 top-4 flex size-10 items-center justify-center rounded-full bg-background/80 text-foreground backdrop-blur transition-colors hover:text-primary"
+          >
+            <X className="size-5" />
+          </button>
+
+          {images.length > 1 ? (
+            <>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  lightboxPrev()
+                }}
+                aria-label="Imagem anterior"
+                className="absolute left-3 top-1/2 flex size-10 -translate-y-1/2 items-center justify-center rounded-full bg-background/80 text-foreground backdrop-blur transition-colors hover:text-primary sm:left-6"
+              >
+                <ChevronLeft className="size-5" />
+              </button>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  lightboxNext()
+                }}
+                aria-label="Próxima imagem"
+                className="absolute right-3 top-1/2 flex size-10 -translate-y-1/2 items-center justify-center rounded-full bg-background/80 text-foreground backdrop-blur transition-colors hover:text-primary sm:right-6"
+              >
+                <ChevronRight className="size-5" />
+              </button>
+            </>
+          ) : null}
+
+          <img
+            src={images[lightboxIndex]}
+            alt={title}
+            className="max-h-[65vh] max-w-[90vw] rounded-lg object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      ) : null}
     </div>
   )
 }

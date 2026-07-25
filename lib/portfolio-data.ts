@@ -26,6 +26,22 @@ export type Experience = {
 
 export const projects: Project[] = [
   {
+    title: 'WebTech Premium App',
+    technologies: ['React Native', 'Expo', 'Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'JWT', 'Tailwind CSS', 'Git', 'GitHub'],
+    description:
+      'Mono repositório com aplicativo mobile em React Native (Expo) e painel administrativo em Next.js para gerenciamento de apps instalados via leitura de listas M3U. A identificação dos dispositivos é feita por endereço MAC, com sincronização entre o app e o painel, autenticação JWT, API integrada e persistência em PostgreSQL com Prisma.',
+    githubUrl: 'https://github.com/KCHAGAS94/webtechpremium-app',
+    videoSrc: '/projects/webtechpremium-app/gravacao-final.mp4',
+    images: [
+      '/projects/webtechpremium-app/1-home.jpeg',
+      '/projects/webtechpremium-app/2-tvaovivo.jpeg',
+      '/projects/webtechpremium-app/3-filmes.jpeg',
+      '/projects/webtechpremium-app/4-series.jpeg',
+      '/projects/webtechpremium-app/5-configuração.jpeg',
+      '/projects/webtechpremium-app/6-minhaslistas.jpeg',
+    ],
+  },
+  {
     title: 'Site: Aniversário de 15 anos',
     technologies: ['React', 'Next.js', 'TypeScript', 'PostgreSQL', 'API PAGAMENTOS', 'Tailwind CSS', 'Git', 'GitHub', 'VPS', 'PuTTY', 'UI e UX'],
     description:
