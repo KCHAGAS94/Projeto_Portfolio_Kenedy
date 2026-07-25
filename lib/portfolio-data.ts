@@ -88,6 +88,13 @@ export const moreProjects: MoreProject[] = [
     githubUrl: 'https://github.com/KCHAGAS94/Vereador_Jamil',
     liveUrl: 'https://10milenumerodojamil.netlify.app/',
   },
+  {
+    title: 'Swing Samba',
+    description:
+      'Painel de gestão para eventos de samba, com agenda, lista de convidados e controle de arquivos, facilitando a organização e o acompanhamento das confirmações de presença.',
+    githubUrl: 'https://github.com/KCHAGAS94/swing-samba',
+    liveUrl: 'https://swingsamba.netlify.app/',
+  },
 ]
 
 export const experiences: Experience[] = [
