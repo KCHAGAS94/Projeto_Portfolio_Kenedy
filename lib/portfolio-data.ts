@@ -144,6 +144,12 @@ export const moreProjects: MoreProject[] = [
       'Aplicação web para organização de tarefas do dia a dia, com tela de login e página para acompanhamento das tarefas cadastradas pelo usuário.',
     githubUrl: 'https://github.com/KCHAGAS94/Gestao_tarefas_diaria',
   },
+  {
+    title: 'ERP Império Niltanielle',
+    description:
+      'Sistema ERP full-stack sob medida, com módulos de cadastro de clientes e fornecedores, contas a receber e pagamentos, fluxo de caixa e DRE, PCP, ordens de produção, estrutura de produtos e controle de estoque. Frontend em React, Vite e Tailwind CSS, backend em Node.js e Express.',
+    githubUrl: 'https://github.com/KCHAGAS94/erp-imperioniltan',
+  },
 ]
 
 export const experiences: Experience[] = [
