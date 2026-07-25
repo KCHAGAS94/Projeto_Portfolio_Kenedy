@@ -81,6 +81,13 @@ export const moreProjects: MoreProject[] = [
     githubUrl: 'https://github.com/KCHAGAS94/radioleaodejuda',
     liveUrl: 'https://radioleaodejuda.netlify.app/',
   },
+  {
+    title: '10 Mil - Número do Jamil',
+    description:
+      'Site institucional de campanha para candidato a vereador, apresentando biografia, trabalhos voluntários, apoiadores, indicações e propostas de governo como capacitação profissional, educação financeira e transparência escolar.',
+    githubUrl: 'https://github.com/KCHAGAS94/Vereador_Jamil',
+    liveUrl: 'https://10milenumerodojamil.netlify.app/',
+  },
 ]
 
 export const experiences: Experience[] = [
