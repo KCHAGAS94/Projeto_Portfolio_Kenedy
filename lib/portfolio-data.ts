@@ -51,7 +51,14 @@ export const projects: Project[] = [
 ]
 
 // Projetos exibidos no carrossel "Mais Projetos": apenas título, descrição e link do repositório
-export const moreProjects: MoreProject[] = []
+export const moreProjects: MoreProject[] = [
+  {
+    title: 'Gestão de Contas',
+    description:
+      'Aplicação web para controle financeiro pessoal, com cadastro de transações e limites de gastos. Desenvolvida com Next.js, TypeScript e Tailwind CSS, utilizando Prisma e PostgreSQL para persistência dos dados e autenticação via JWT.',
+    githubUrl: 'https://github.com/KCHAGAS94/gestaocontas3',
+  },
+]
 
 export const experiences: Experience[] = [
   {
