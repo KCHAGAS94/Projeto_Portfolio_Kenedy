@@ -74,6 +74,13 @@ export const moreProjects: MoreProject[] = [
     githubUrl: 'https://github.com/KCHAGAS94/over_time',
     liveUrl: 'https://calculohoraextra.netlify.app/',
   },
+  {
+    title: 'Rádio Leão de Judá',
+    description:
+      'Site institucional para uma rádio online, com apresentação da rádio, grade de programação e horários, área de doações e seção de apoiadores.',
+    githubUrl: 'https://github.com/KCHAGAS94/radioleaodejuda',
+    liveUrl: 'https://radioleaodejuda.netlify.app/',
+  },
 ]
 
 export const experiences: Experience[] = [
