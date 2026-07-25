@@ -108,6 +108,12 @@ export const moreProjects: MoreProject[] = [
       'Sistema para controle pessoal de compras e gastos, com cadastro de compras e geração de relatórios. Utiliza Firebase para autenticação e persistência dos dados.',
     githubUrl: 'https://github.com/KCHAGAS94/controle-finaceiro',
   },
+  {
+    title: 'WebTechFlix',
+    description:
+      'Assistente pessoal para descobrir filmes com base no humor ou preferência do usuário: basta descrever como está se sentindo ou o tipo de filme desejado que a aplicação sugere os títulos mais adequados.',
+    githubUrl: 'https://github.com/KCHAGAS94/botflixv1',
+  },
 ]
 
 export const experiences: Experience[] = [
