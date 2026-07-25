@@ -120,6 +120,12 @@ export const moreProjects: MoreProject[] = [
       'Aplicação para download de vídeos do YouTube, com interface moderna e responsiva construída em React, Vite e Tailwind CSS, incluindo validação de URLs e feedback visual durante o processamento.',
     githubUrl: 'https://github.com/KCHAGAS94/baixatube',
   },
+  {
+    title: 'Sistema de Gestão de Projetos',
+    description:
+      'Protótipo de sistema para gestão de projetos com quadro kanban, cadastro de usuários, cards e atividades. Estrutura profissional em React, Vite e TypeScript no frontend, com json-server simulando a API no backend.',
+    githubUrl: 'https://github.com/KCHAGAS94/sistema-criar-prototipo',
+  },
 ]
 
 export const experiences: Experience[] = [
@@ -158,9 +164,9 @@ export const experiences: Experience[] = [
 export const skills: { category: string; items: string[] }[] = [
   { category: 'Linguagens', items: ['JavaScript', 'TypeScript'] },
   { category: 'Frameworks & Bibliotecas', items: ['React', 'Next.js'] },
-  { category: 'Banco de Dados', items: ['PostgreSQL'] },
+  { category: 'Banco de Dados', items: ['PostgreSQL', 'Firebase'] },
   { category: 'Controle de Versão', items: ['Git', 'GitHub'] },
-  { category: 'Infraestrutura', items: ['VPS', 'PuTTY'] },
+  { category: 'Infraestrutura', items: ['Play Store','VPS', 'PuTTY'] },
   { category: 'Outras Competências', items: ['Sistemas ERP', 'UI e UX', 'Desenvolvimento Web'] },
   { category: 'Idiomas', items: ['Inglês (leitura intermediária)'] },
 ]
