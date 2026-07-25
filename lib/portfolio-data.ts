@@ -114,6 +114,12 @@ export const moreProjects: MoreProject[] = [
       'Assistente pessoal para descobrir filmes com base no humor ou preferência do usuário: basta descrever como está se sentindo ou o tipo de filme desejado que a aplicação sugere os títulos mais adequados.',
     githubUrl: 'https://github.com/KCHAGAS94/botflixv1',
   },
+  {
+    title: 'BaixaTube',
+    description:
+      'Aplicação para download de vídeos do YouTube, com interface moderna e responsiva construída em React, Vite e Tailwind CSS, incluindo validação de URLs e feedback visual durante o processamento.',
+    githubUrl: 'https://github.com/KCHAGAS94/baixatube',
+  },
 ]
 
 export const experiences: Experience[] = [
