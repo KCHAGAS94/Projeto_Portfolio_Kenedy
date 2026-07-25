@@ -10,6 +10,12 @@ export type Project = {
   images?: string[]
 }
 
+export type MoreProject = {
+  title: string
+  description: string
+  githubUrl: string
+}
+
 export type Experience = {
   company: string
   role: string
@@ -42,30 +48,10 @@ export const projects: Project[] = [
       
     ],
   },
-  {
-    title: 'Projeto 2',
-    technologies: ['JavaScript', 'Next.js', 'PostgreSQL', 'Git'],
-    description:
-      'Descrição breve do projeto. Substitua por um resumo do que ele faz, o problema que resolve e seu papel no desenvolvimento.',
-    videoSrc: '',
-    images: [],
-  },
-  {
-    title: 'Projeto 3',
-    technologies: ['JavaScript', 'Next.js', 'PostgreSQL', 'Git'],
-    description:
-      'Descrição breve do projeto. Substitua por um resumo do que ele faz, o problema que resolve e seu papel no desenvolvimento.',
-    githubUrl: 'https://github.com/seu-usuario/seu-repositorio',
-
-  },
-  {
-    title: 'Projeto 3',
-    technologies: ['JavaScript', 'Next.js', 'PostgreSQL', 'Git'],
-    description:
-      'Descrição breve do projeto. Substitua por um resumo do que ele faz, o problema que resolve e seu papel no desenvolvimento.',
-    githubUrl: 'https://github.com/seu-usuario/seu-repositorio',
-  },
 ]
+
+// Projetos exibidos no carrossel "Mais Projetos": apenas título, descrição e link do repositório
+export const moreProjects: MoreProject[] = []
 
 export const experiences: Experience[] = [
   {
