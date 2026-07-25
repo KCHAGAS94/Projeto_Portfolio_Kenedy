@@ -150,6 +150,12 @@ export const moreProjects: MoreProject[] = [
       'Sistema ERP full-stack sob medida, com módulos de cadastro de clientes e fornecedores, contas a receber e pagamentos, fluxo de caixa e DRE, PCP, ordens de produção, estrutura de produtos e controle de estoque. Frontend em React, Vite e Tailwind CSS, backend em Node.js e Express.',
     githubUrl: 'https://github.com/KCHAGAS94/erp-imperioniltan',
   },
+  {
+    title: 'Painel de Estudos',
+    description:
+      'Painel para organização de rotina de estudos, com login, cadastro de usuário, plano de estudos e anotações de tarefas.',
+    githubUrl: 'https://github.com/KCHAGAS94/agenda-de-estudo',
+  },
 ]
 
 export const experiences: Experience[] = [
