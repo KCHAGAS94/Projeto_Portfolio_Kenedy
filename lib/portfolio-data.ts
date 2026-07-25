@@ -95,6 +95,13 @@ export const moreProjects: MoreProject[] = [
     githubUrl: 'https://github.com/KCHAGAS94/swing-samba',
     liveUrl: 'https://swingsamba.netlify.app/',
   },
+  {
+    title: 'Lista de Compras',
+    description:
+      'Aplicação para criação e gerenciamento de listas de compras, permitindo adicionar, marcar e organizar produtos. Desenvolvida com Next.js e React Context para gerenciamento de estado.',
+    githubUrl: 'https://github.com/KCHAGAS94/lista-compras',
+    liveUrl: 'https://listacomprar.netlify.app/',
+  },
 ]
 
 export const experiences: Experience[] = [
