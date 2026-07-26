@@ -27,7 +27,7 @@ export type Experience = {
 export const projects: Project[] = [
   {
     title: 'WebTech Premium App',
-    technologies: ['React Native', 'Expo', 'Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'JWT', 'Tailwind CSS', 'Git', 'GitHub'],
+    technologies: ['React Native', 'Expo', 'Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'JWT', 'Tailwind CSS', 'Git', 'GitHub','Play Store','VPS', 'PuTTY', 'UI e UX', 'API'],
     description:
       'Mono repositório com aplicativo mobile em React Native (Expo) e painel administrativo em Next.js para gerenciamento de apps instalados via leitura de listas M3U. A identificação dos dispositivos é feita por endereço MAC, com sincronização entre o app e o painel, autenticação JWT, API integrada e persistência em PostgreSQL com Prisma.',
     githubUrl: 'https://github.com/KCHAGAS94/webtechpremium-app',
@@ -39,6 +39,8 @@ export const projects: Project[] = [
       '/projects/webtechpremium-app/4-series.jpeg',
       '/projects/webtechpremium-app/5-configuração.jpeg',
       '/projects/webtechpremium-app/6-minhaslistas.jpeg',
+      '/projects/webtechpremium-app/7-painelusuarios.png',
+      '/projects/webtechpremium-app/8-painelservidor.png',
     ],
   },
   {
@@ -47,6 +49,7 @@ export const projects: Project[] = [
     description:
       'Desenvolvi uma plataforma web para convite de festa de 15 anos, com foco em experiência visual, confirmação de presença e gestão do evento. O projeto foi construído com Next.js, React e Tailwind CSS, incluindo RSVP com persistência em PostgreSQL e integração com Mercado Pago para pagamentos via PIX e cartão, além de páginas administrativas para acompanhamento de confirmados e status de pagamentos.',
     liveUrl: 'https://15anosvitoriaemanuelly.kchagas.com.br',
+    githubUrl: 'https://github.com/KCHAGAS94/site-niver-15-anos',
     videoSrc: '/projects/site-niver-15-anos/gravacao-final.mp4',
     images: [
       '/projects/site-niver-15-anos/capa.png',
@@ -62,7 +65,31 @@ export const projects: Project[] = [
       '/projects/site-niver-15-anos/site-confirmacao.png',
       '/projects/site-niver-15-anos/site-confirmados.png',
       '/projects/site-niver-15-anos/relatorio-pagamentos.png',
-      
+
+    ],
+  },
+  {
+    title: 'OpenFest',
+    technologies: ['React', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'PostgreSQL', 'Git', 'GitHub'],
+    description:
+      'Sistema de gerenciamento de eventos com frente de caixa (PDV), suporte a pagamentos em dinheiro, PIX e crédito, gestão de produtos, impressão de recibos e painéis administrativos de dashboard, financeiro e funcionários.',
+    githubUrl: 'https://github.com/KCHAGAS94/OpenFest',
+    videoSrc: '/projects/OpenFest/gravacao-final.mp4',
+    images: [
+      '/projects/OpenFest/2-caixa.png',
+      '/projects/OpenFest/3-formadepagamento.png',
+      '/projects/OpenFest/4-pagamentodinheiro.png',
+      '/projects/OpenFest/5-pagamentopix.png',
+      '/projects/OpenFest/6-pagamentocredito.png',
+      '/projects/OpenFest/7-gestaoprodutos.png',
+      '/projects/OpenFest/8-novoproduto.png',
+      '/projects/OpenFest/9-reciboimpressao1.png',
+      '/projects/OpenFest/10-reciboimpressao2.jpeg',
+      '/projects/OpenFest/11-painel-dashboard.png',
+      '/projects/OpenFest/12-painel-financeiro.png',
+      '/projects/OpenFest/13-painel-funcionarios.png',
+      '/projects/OpenFest/14-painel-produtos1.png',
+      '/projects/OpenFest/15-painel-produtos2.png',
     ],
   },
 ]
