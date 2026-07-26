@@ -92,6 +92,15 @@ export const projects: Project[] = [
       '/projects/OpenFest/15-painel-produtos2.png',
     ],
   },
+  {
+    title: 'Sistema Integrado Omie - Almoxarifado',
+    technologies: ['React', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'JWT', 'API Omie', 'Git', 'GitHub'],
+    description:
+      'Suíte de programas integrados à API do Omie para gestão de almoxarifado, composta por Menu principal, Separador, Recebimento, Separador de OP, Separador de Remessa, Inventário, Requisição de Material, Estoque, Relatórios e programas auxiliares, cada um com frontend e backend próprios em arquitetura de monorepo.',
+    githubUrl: 'https://github.com/KCHAGAS94/ProgramasOmieAlmox',
+    videoSrc: '/projects/ProgramasOmieAlmox/gravacao-final.mp4',
+    images: [],
+  },
 ]
 
 // Projetos exibidos no carrossel "Mais Projetos": apenas título, descrição e link do repositório
