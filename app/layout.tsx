@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
+import { WhatsappButton } from '@/components/whatsapp-button'
 import './globals.css'
 
 const inter = Inter({
@@ -36,6 +37,7 @@ export default function RootLayout({
     <html lang="pt-BR" className={`${inter.variable} ${playfair.variable} bg-background`}>
       <body className="font-sans antialiased">
         {children}
+        <WhatsappButton />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
