@@ -4,8 +4,6 @@ export type Project = {
   description: string
   liveUrl?: string
   githubUrl?: string
-  // Coloque aqui o caminho do vídeo (ex: "/videos/projeto-1.mp4") ou deixe vazio para mostrar o placeholder
-  videoSrc?: string
   // Coloque aqui os caminhos das imagens do projeto (ex: "/projetos/projeto-1-1.png")
   images?: string[]
 }
@@ -31,7 +29,6 @@ export const projects: Project[] = [
     description:
       'Mono repositório com aplicativo mobile em React Native (Expo) e painel administrativo em Next.js para gerenciamento de apps instalados via leitura de listas M3U. A identificação dos dispositivos é feita por endereço MAC, com sincronização entre o app e o painel, autenticação JWT, API integrada e persistência em PostgreSQL com Prisma.',
     githubUrl: 'https://github.com/KCHAGAS94/webtechpremium-app',
-    videoSrc: '/projects/webtechpremium-app/gravacao-final.mp4',
     images: [
       '/projects/webtechpremium-app/1-home.jpeg',
       '/projects/webtechpremium-app/2-tvaovivo.jpeg',
@@ -50,7 +47,6 @@ export const projects: Project[] = [
       'Desenvolvi uma plataforma web para convite de festa de 15 anos, com foco em experiência visual, confirmação de presença e gestão do evento. O projeto foi construído com Next.js, React e Tailwind CSS, incluindo RSVP com persistência em PostgreSQL e integração com Mercado Pago para pagamentos via PIX e cartão, além de páginas administrativas para acompanhamento de confirmados e status de pagamentos.',
     liveUrl: 'https://15anosvitoriaemanuelly.kchagas.com.br',
     githubUrl: 'https://github.com/KCHAGAS94/site-niver-15-anos',
-    videoSrc: '/projects/site-niver-15-anos/gravacao-final.mp4',
     images: [
       '/projects/site-niver-15-anos/capa.png',
       '/projects/site-niver-15-anos/sobre.png',
@@ -74,7 +70,6 @@ export const projects: Project[] = [
     description:
       'Sistema de gerenciamento de eventos com frente de caixa (PDV), suporte a pagamentos em dinheiro, PIX e crédito, gestão de produtos, impressão de recibos e painéis administrativos de dashboard, financeiro e funcionários.',
     githubUrl: 'https://github.com/KCHAGAS94/OpenFest',
-    videoSrc: '/projects/OpenFest/gravacao-final.mp4',
     images: [
       '/projects/OpenFest/2-caixa.png',
       '/projects/OpenFest/3-formadepagamento.png',
@@ -98,7 +93,6 @@ export const projects: Project[] = [
     description:
       'Suíte de programas integrados à API do Omie para gestão de almoxarifado, composta por Menu principal, Separador, Recebimento, Separador de OP, Separador de Remessa, Inventário, Requisição de Material, Estoque, Relatórios e programas auxiliares, cada um com frontend e backend próprios em arquitetura de monorepo.',
     githubUrl: 'https://github.com/KCHAGAS94/ProgramasOmieAlmox',
-    videoSrc: '/projects/ProgramasOmieAlmox/gravacao-final.mp4',
     images: [],
   },
 ]
@@ -244,11 +238,22 @@ export const experiences: Experience[] = [
 ]
 
 export const skills: { category: string; items: string[] }[] = [
-  { category: 'Linguagens', items: ['JavaScript', 'TypeScript'] },
-  { category: 'Frameworks & Bibliotecas', items: ['React', 'Next.js'] },
-  { category: 'Banco de Dados', items: ['PostgreSQL', 'Firebase'] },
+  { category: 'Linguagens', items: ['JavaScript', 'TypeScript', 'Python', 'PHP', 'HTML', 'CSS'] },
+  {
+    category: 'Frontend',
+    items: ['React', 'Next.js', 'React Native (Expo)', 'Tailwind CSS', 'Radix UI / shadcn', 'Vite'],
+  },
+  {
+    category: 'Backend',
+    items: ['Node.js', 'Express', 'JWT', 'Prisma ORM', 'REST API'],
+  },
+  { category: 'Banco de Dados', items: ['PostgreSQL', 'MySQL', 'Firebase'] },
+  {
+    category: 'Automação & Integrações',
+    items: ['Puppeteer', 'Axios', 'Mercado Pago API', 'Omie API', 'node-cron'],
+  },
   { category: 'Controle de Versão', items: ['Git', 'GitHub'] },
-  { category: 'Infraestrutura', items: ['Play Store','VPS', 'PuTTY'] },
-  { category: 'Outras Competências', items: ['Sistemas ERP', 'UI e UX', 'Desenvolvimento Web'] },
+  { category: 'Infraestrutura', items: ['Play Store', 'VPS', 'PuTTY', 'Vercel'] },
+  { category: 'Outras Competências', items: ['Sistemas ERP', 'UI e UX', 'Desenvolvimento Web', 'Desenvolvimento Mobile'] },
   { category: 'Idiomas', items: ['Inglês (leitura intermediária)'] },
 ]

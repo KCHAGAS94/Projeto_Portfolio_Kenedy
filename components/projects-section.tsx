@@ -1,5 +1,4 @@
 import { SectionHeading } from '@/components/section-heading'
-import { VideoFrame } from '@/components/video-frame'
 import { ImageCarousel } from '@/components/image-carousel'
 import { projects } from '@/lib/portfolio-data'
 
@@ -56,14 +55,9 @@ export function ProjectsSection() {
                 ) : null}
               </div>
 
-              {project.videoSrc || (project.images && project.images.length > 0) ? (
+              {project.images && project.images.length > 0 ? (
                 <div className="mt-8 space-y-6">
-                  {project.videoSrc ? (
-                    <VideoFrame src={project.videoSrc} label={`Adicione o vídeo de ${project.title}`} />
-                  ) : null}
-                  {project.images && project.images.length > 0 ? (
-                    <ImageCarousel images={project.images} title={project.title} />
-                  ) : null}
+                  <ImageCarousel images={project.images} title={project.title} />
                 </div>
               ) : null}
             </article>

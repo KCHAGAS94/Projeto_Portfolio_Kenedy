@@ -31,7 +31,7 @@ export function HeroSection() {
         </p>
 
         <p className="mt-6 max-w-xl text-pretty leading-relaxed text-muted-foreground">
-          Construindo aplicações web modernas com React, Next.js, TypeScript e PostgreSQL.
+          Construindo aplicações web modernas com React, Next.js, TypeScript, React-Native e PostgreSQL.
         </p>
 
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
