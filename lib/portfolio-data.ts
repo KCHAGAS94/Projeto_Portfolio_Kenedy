@@ -125,6 +125,22 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: 'Dashboard-saida',
+    technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Chart.js', 'SheetJS (xlsx)', 'Jest', 'Git', 'GitHub'],
+    description:
+      'Dashboard interativo para análise de vendas a partir de planilhas Excel. Faz upload de arquivos .xlsx com detecção automática de colunas de modelo e valor, agrupa e processa os registros para gerar estatísticas em tempo real (totais, médias, percentuais e ticket médio) e visualizações com gráficos de barras e linhas via Chart.js, além de exportação dos dados analisados em CSV.',
+    githubUrl: 'https://github.com/KCHAGAS94/Dashboard-saida',
+    images: [
+      '/projects/Dashboard-saida/1-Dashboard-saida.png',
+      '/projects/Dashboard-saida/2-Dashboard-saida-analisemodelo.png',
+      '/projects/Dashboard-saida/3-Dashboard-saida-grafico-dados-por-modelo.png',
+      '/projects/Dashboard-saida/4-Dashboard-saida-dados-por-item.png',
+      '/projects/Dashboard-saida/5-Dashboard-saida-dados-por-item-filtro.png',
+      '/projects/Dashboard-saida/6-Dashboard-saida-filtro-comparação.png',
+      '/projects/Dashboard-saida/7-Dashboard-saida-filtro-comparação.png',
+    ],
+  },
+  {
     title: 'ControlStock',
     technologies: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'PostgreSQL', 'Git', 'GitHub'],
     description:
