@@ -95,6 +95,29 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/KCHAGAS94/ProgramasOmieAlmox',
     images: [],
   },
+  {
+    title: 'ControlStock',
+    technologies: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'PostgreSQL', 'Git', 'GitHub'],
+    description:
+      'Sistema completo de controle de estoque, produção e requisições, rodando 100% local. Reúne módulos de dashboard, requisição de material, inventário, compras, planejamento de ordens de produção, separação de pedidos/remessas e gerenciamento de usuários com perfis de acesso (Admin, Supervisor, Operador).',
+    githubUrl: 'https://github.com/KCHAGAS94/controlstock2',
+    images: [
+      '/projects/controlstock2/1-menu.png',
+      '/projects/controlstock2/2-gerenciadorusuario.png',
+      '/projects/controlstock2/3-controledeplanejamentoonline.png',
+      '/projects/controlstock2/4-compras.png',
+      '/projects/controlstock2/5-cadastrodeproduto.png',
+      '/projects/controlstock2/5-cadastrodeproduto2.png',
+      '/projects/controlstock2/8-controledeconferencia.png',
+      '/projects/controlstock2/9-controleestoqueminimo.png',
+      '/projects/controlstock2/10-controlerequisiçãomaterial.png',
+      '/projects/controlstock2/11-inventario.png',
+      '/projects/controlstock2/12-inventario.png',
+      '/projects/controlstock2/13-controledeseparacaoop.png',
+      '/projects/controlstock2/14-controlederemessadeenvio.png',
+      '/projects/controlstock2/15-controledepedidos.png',
+    ],
+  },
 ]
 
 // Projetos exibidos no carrossel "Mais Projetos": apenas título, descrição e link do repositório
